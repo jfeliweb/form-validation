@@ -47,6 +47,7 @@
   #successMessage {
     color: green;
     font-size: 90% !important;
+    margin-bottom: 5px;
   }
 </style>
 
@@ -126,6 +127,7 @@
         $("#errorMessage").html(errorMessage);
       } else {
         $("#successMessage").html(successMessage);
+        $("#errorMessage").hide();
       }
 
     });
