@@ -43,11 +43,19 @@
     color: red;
     font-size: 90% !important;
   }
+
+  #successMessage {
+    color: green;
+    font-size: 90% !important;
+  }
 </style>
 
 <body>
 
   <div id="wrapper">
+
+    <div id="successMessage"></div>
+
     <div id="errorMessage"></div>
 
     <div class="form-element">
@@ -80,6 +88,7 @@
     $("#submitButton").click(function () {
       var errorMessage = "";
       var fieldsMissing = "";
+      var successMessage = "Success";
 
       if ($("#email").val() == "") {
         fieldsMissing += "<br> Email";
@@ -115,7 +124,10 @@
 
       if (errorMessage != "") {
         $("#errorMessage").html(errorMessage);
+      } else {
+        $("#successMessage").html(successMessage);
       }
+
     });
   </script>
 
