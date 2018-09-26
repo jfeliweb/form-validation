@@ -72,6 +72,27 @@
 
     $("#submitButton").click(function () {
       var errorMessage = "";
+      var fieldsMissing = "";
+
+      if ($("#email").val() == "") {
+        fieldsMissing += "<br> Email";
+      }
+
+      if ($("#phone").val() == "") {
+        fieldsMissing += "<br> Phone";
+      }
+
+      if ($("#password").val() == "") {
+        fieldsMissing += "<br> Password";
+      }
+
+      if ($("#passwordconfirm").val() == "") {
+        fieldsMissing += "<br> Confirm Password";
+      }
+
+      if (fieldsMissing != "") {
+        errorMessage += "<p>The following field(s) are missing:</p>" + fieldsMissing;
+      }
 
       if (isEmail($("#email").val()) == false) {
         errorMessage += "<p>Your email address is not valid</p>"
