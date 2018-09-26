@@ -4,10 +4,69 @@
   <title>jQuery</title>
 </head>
 <script type="text/javascript" src="jquery.min.js"></script>
+<style type="text/css">
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 130%
+  }
+
+  input {
+    padding: 5px 5px 12px 5px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 315px;
+  }
+
+  label {
+    position: relative;
+    top: 12px;
+    width: 200px;
+    float: left;
+  }
+
+  #wrapper {
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .form-element {
+    margin-bottom: 10px;
+  }
+
+  #submitButton {
+    width: 130px;
+    margin-left: 200px;
+  }
+</style>
 
 <body>
 
+  <div id="wrapper">
+    <div class="form-element">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" placeholder="ex. name@email.com">
+    </div>
+    <div class="form-element">
+      <label for="phone">Telephone</label>
+      <input type="text" name="phone" id="phone" placeholder="ex. (555)555-5555">
+    </div>
+    <div class="form-element">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password">
+    </div>
+    <div class="form-element">
+      <label for="passwordconfirm">Confirm Password</label>
+      <input type="password" name="passwordconfirm" id="passwordconfirm">
+    </div>
+    <div class="form-element">
+      <input type="submit" name="submit" id="submitButton" value="Sign Up">
+    </div>
+  </div>
+
   <script type="text/javascript">
+
+
 
   </script>
 
