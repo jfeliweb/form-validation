@@ -81,6 +81,10 @@
         errorMessage += "<p>Your Phone number is not numeric</p>"
       }
 
+      if ($("#password").val() != $("#passwordconfirm").val()) {
+        errorMessage += "<p>Your Passwords does not match</p>";
+      }
+
       alert(errorMessage);
     });
   </script>
