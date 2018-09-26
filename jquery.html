@@ -38,11 +38,18 @@
     width: 130px;
     margin-left: 200px;
   }
+
+  #errorMessage {
+    color: red;
+    font-size: 90% !important;
+  }
 </style>
 
 <body>
 
   <div id="wrapper">
+    <div id="errorMessage"></div>
+
     <div class="form-element">
       <label for="email">Email</label>
       <input type="text" name="email" id="email" placeholder="ex. name@email.com">
@@ -106,7 +113,9 @@
         errorMessage += "<p>Your Passwords does not match</p>";
       }
 
-      alert(errorMessage);
+      if (errorMessage != "") {
+        $("#errorMessage").html(errorMessage);
+      }
     });
   </script>
 
